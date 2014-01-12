@@ -1,0 +1,24 @@
+--- GWEN/gwen/Projects/premake4.lua.orig	2013-12-03 17:59:05.000000000 +0100
++++ GWEN/gwen/Projects/premake4.lua	2013-12-07 08:43:00.753323726 +0100
+@@ -61,10 +61,6 @@
+                 { "../Renderers/OpenGL/OpenGL.cpp",
+                   "../Renderers/OpenGL/DebugFont/OpenGL_DebugFont.cpp" } )
+ 
+-DefineRenderer( "SFML",
+-                { "../Renderers/SFML/SFML.cpp" },
+-                SFML_DEFINES )
+-
+ DefineRenderer( "SFML2",
+                 { "../Renderers/SFML2/SFML2.cpp" },
+                 SFML2_DEFINES )
+@@ -98,10 +94,6 @@
+               nil,
+               { "USE_DEBUG_FONT" } )
+ 
+-DefineSample( "SFML",
+-              { "../Samples/SFML/SFML.cpp" },
+-              SFML_LIBS, SFML_LIBS_D, SFML_DEFINES )
+-
+ DefineSample( "SFML2",
+               { "../Samples/SFML2/SFML2.cpp" },
+               SFML2_LIBS, SFML2_LIBS_D, SFML2_DEFINES )

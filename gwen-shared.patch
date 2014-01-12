@@ -1,0 +1,28 @@
+--- GWEN/gwen/Projects/premake4.lua.orig	2014-01-11 22:04:10.678689141 +0100
++++ GWEN/gwen/Projects/premake4.lua	2014-01-12 09:18:46.416990534 +0100
+@@ -135,10 +135,10 @@
+ 
+ project "ControlFactory"
+ 	files { "../Util/ControlFactory/**.*" }
+-	kind "StaticLib"
+-	targetname( "controlfactory" )
++	kind "SharedLib"
++	targetname( "GWEN-controlfactory" )
+ 
+ project "ImportExport"
+ 	files { "../Util/ImportExport/**.*" }
+-	kind "StaticLib"
+-	targetname( "importexport" )
++	kind "SharedLib"
++	targetname( "GWEN-importexport" )
+--- GWEN/gwen/Projects/inc/include.lua.orig	2013-12-03 17:59:05.000000000 +0100
++++ GWEN/gwen/Projects/inc/include.lua	2014-01-12 09:19:28.623655429 +0100
+@@ -6,7 +6,7 @@
+ 	project ( "Renderer-"..name )
+ 	files( filetable )
+ 	flags( { "Symbols" } )
+-	kind( "StaticLib" )
++	kind( "SharedLib" )
+     if ( definestable ) then defines( definestable ) end
+ 	
+ 	configuration( "Release" )

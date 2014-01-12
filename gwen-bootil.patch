@@ -1,0 +1,11 @@
+--- GWEN/gwen/Util/ImportExport/DesignerFormat.cpp.orig	2013-12-03 17:59:05.000000000 +0100
++++ GWEN/gwen/Util/ImportExport/DesignerFormat.cpp	2014-01-11 22:03:28.648690905 +0100
+@@ -37,7 +37,7 @@
+ 	{ return; }
+ 
+ 	Bootil::Data::Tree tree;
+-	Bootil::Data::Json::Import( tree, strContents );
++	Bootil::Data::Json::Import( tree, strContents.c_str() );
+ 
+ 	if ( !tree.HasChild( "Controls" ) ) { return; }  // false
+ 
